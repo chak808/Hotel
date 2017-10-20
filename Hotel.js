@@ -12,6 +12,7 @@ function checkIn(roomN, rA, lN) {
           addDate.appendChild(newDate);
           addName.appendChild(addDate);
           position.appendChild(addName);
+          document.getElementById(rA).value = "";
           if (roomName.length == 3) {
               document.getElementsByClassName('room')[lN].style.border = "2.5px solid red";
               var space = document.getElementsByTagName('h2')[lN];
@@ -28,7 +29,7 @@ function checkOut(rR, roomN, lN) {
         var  cON = document.getElementById(rR);
         var userOpt = cON.options[cON.selectedIndex].value;
         var checkOut = document.getElementById(roomN);
-        checkOut.removeChild(checkOut.childNodes[userOpt - 1]);
+        checkOut.removeChild(checkOut.childNodes[userOpt]);
       }
 function enterIn(roomN, rA, lN) {
         if (window.event.keyCode == 13) {
