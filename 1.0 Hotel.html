@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+    <script src="Hotel.js"></script>
+    <link rel="stylesheet" type="text/css" href="Hotel.css">
+  </head>
+  <body>
+    <div id="title">
+      <h1>Hotel Way Too Expensive</h1>
+      <div id = time></div>
+    </div>
+    <div id="r1" class="room">
+      <h1>Room 1</h1>
+      <h2>Available</h2>
+      <input type="text" onkeydown="enterIn('room1', 'r1a', 0)" id="r1a">
+      <button onclick="checkIn('room1', 'r1a', 0)">Check In </button>
+      <br>
+      <br>
+      <select id = "r1r" onkeydown="enterOut('r1r', 'room1', 0)">
+        <option>Select #</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button onclick="checkOut('r1r', 'room1', 0)">Check Out</button>
+      <ol id="room1">
+      </ol>
+    </div>
+    <div id="r2" class="room">
+      <h1>Room 2</h1>
+      <h2>Available</h2>
+      <input type="text" onkeydown="enterIn('room2', 'r2a', 1)" id="r2a">
+      <button onclick="checkIn('room2', 'r2a', 1)">Check In</button>
+      <br>
+      <br>
+      <select id = "r2r" onkeydown="enterOut('r2r', 'room2', 1)">
+        <option>Select #</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button onclick="checkOut('r2r', 'room2', 1)">Check Out</button>
+      <ol id="room2">
+      </ol>
+    </div>
+    <div id="r3" class="room">
+      <h1>Room 3</h1>
+      <h2>Available</h2>
+      <input type="text" onkeydown="enterIn('room3', 'r3a', 2)" id="r3a">
+      <button onclick="checkIn('room3', 'r3a', 2)">Check In</button>
+      <br>
+      <br>
+      <select id = "r3r" onkeydown="enterOut('r3r', 'room3', 2)">
+        <option>Select #</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button onclick="checkOut('r3r', 'room3', 2)">Check Out</button>
+      <ol id="room3">
+      </ol>
+    </div>
+    <div id="r4" class="room">
+      <h1>Room 4</h1>
+      <h2>Available</h2>
+      <input type="text" onkeydown="enterIn('room4', 'r4a', 3)" id="r4a">
+      <button onclick="checkIn('room4', 'r4a', 3)">Check In</button>
+      <br>
+      <br>
+      <select id = "r4r" onkeydown="enterOut('r4r', 'room4', 3)">
+        <option>Select #</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <button onclick="checkOut('r4r', 'room4', 3)">Check Out</button>
+      <ol id="room4">
+      </ol>
+    </div>
+  </body>
+</html>
