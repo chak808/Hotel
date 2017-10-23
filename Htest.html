@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script>
+      function checkIn() {
+        var roomList = document.getElementById("room1");
+        var roomName = roomList.getElementsByTagName("li");
+        if (roomName.length < 3) {
+          var addName = document.createElement('li');
+          var r1a = document.getElementById('r1a').value;
+          var newName = document.createTextNode(r1a);
+          addName.appendChild(newName);
+          addName.onclick = function () {
+          this.parentElement.removeChild(this);
+          };
+          var position = document.getElementsByTagName('ol')[0];
+          position.appendChild(addName);
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <div id="r1">
+      <input type="text" id="r1a">
+      <button onclick="checkIn()">Check In</button>
+      <br>
+      <ol id="room1">
+      </ol>
+    </div>
+  </body>
+</html>
