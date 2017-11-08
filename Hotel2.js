@@ -8,6 +8,8 @@ function checkIn(roomN, rA, lN) {
           addName.appendChild(newName);
           addName.onclick = function () {
             this.parentElement.removeChild(this);
+            document.getElementsByClassName('userInput')[lN].style.visibility = "visible";
+            document.getElementsByClassName('userClick')[lN].style.visibility = "visible";
             document.getElementsByTagName('span')[lN].style.visibility = "hidden";
             document.getElementsByClassName('room')[lN].style.border = "";
             var space = document.getElementsByTagName('h2')[lN];
@@ -27,6 +29,8 @@ function checkIn(roomN, rA, lN) {
               var space = document.getElementsByTagName('h2')[lN];
               space.innerHTML = "Unavailable";
               space.style.color = "red";
+              document.getElementsByClassName('userInput')[lN].style.visibility = "hidden";
+              document.getElementsByClassName('userClick')[lN].style.visibility = "hidden";
             }
           }
         }
@@ -35,15 +39,13 @@ function enterIn(roomN, rA, lN) {
           checkIn(roomN, rA, lN);
         }
       }
+var myBG = setInterval(rBackground, 10000);
 function rBackground() {
   var rN = Math.floor(Math.random() * 4);
-  var bG = ["url('http://dannykennedyfitness.com/wp-content/uploads/2016/04/KingRoom.jpg')",
-            "url('https://s-i.huffpost.com/gen/1221874/images/o-BEST-HOTEL-POOLS-LA-facebook.jpg')",
-            "url('https://www.dorchestercollection.com/wp-content/uploads/wolfgang-puck-dining-room-interior-hotel-bel-air.jpg')",
-            "url('http://top10hotelbookingsites.webs.com/besthotelsites-1.jpg')"
+  var bG = ["url('Room.jpg')",
+            "url('Pool.jpg')",
+            "url('Dining.jpg')",
+            "url('Hotel.jpg')"
             ];
   document.body.style.backgroundImage=bG[rN];
-}
-while (true) {
-  setTimeout(rBackground(), 1000);
 }
